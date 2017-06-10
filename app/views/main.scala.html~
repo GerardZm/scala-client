@@ -1,0 +1,39 @@
+@*
+ * This template is called from the /index/ template. This
+ * template handles the rendering of page's repeatable
+ * content (HTML header and body tags, webpage navigation).
+ *@
+
+@(title: String)(content: Html)
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@title</title>
+    <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("lib/bootstrap/css/bootstrap.min.css")">
+    <script src="@routes.Assets.versioned("lib/bootstrap/js/bootstrap.min.js")" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" type="image/png" href="@routes.Assets.versioned("images/favicon.png")">
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Nawigacja</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" style=" color: #9d9d9d;">Panel klienta - K1</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+         <ul class="nav navbar-nav navbar-right">
+         </ul>
+        </div>
+      </div>
+    </nav>
+    <div style = "padding-top: 80px;">
+	@content
+    </div>
+</body>
+</html>
