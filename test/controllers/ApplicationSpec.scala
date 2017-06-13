@@ -12,6 +12,7 @@ import play.api.test._
 import play.api.test.Helpers._
 import play.api.libs.ws._
 import play.api.libs.ws.ahc.AhcWSClient
+import java.io.File
 
 /**
  * Conduct unit tests
@@ -50,9 +51,9 @@ class ApplicationSpec extends PlaySpecification {
 	/*"send HTTP POST request containing a FILE and receive response" in new WithServer {
    		val wsClient = AhcWSClient()
 		val controller = new Application(wsClient)
-		val file = new java.io.File(s"test/utilities/unitTest.txt")
-		FileInputStream input = new FileInputStream(file);
-		val upload = controller.upload(new MockMultipartFile("file",file.getName(), "text/plain", IOUtils.toByteArray(input)))
+		//val file = new File(s"test/utilities/unitTest.txt")
+		
+		val upload = controller.upload(multipartFile)
 		status(upload) must equalTo(OK)
 	}*/
   }

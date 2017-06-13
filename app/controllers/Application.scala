@@ -33,6 +33,7 @@ import scala.concurrent.duration._
  * Used sources:
  * https://www.playframework.com/documentation/2.5.x/ScalaWS
  * https://www.playframework.com/documentation/2.5.x/ScalaFileUpload
+ * http://www.javadoc.io/doc/org.asynchttpclient/async-http-client
  *
  * @param wsClient Responsible for HTTP request-response process handling
  */
@@ -88,7 +89,7 @@ class Application @Inject() (wsClient: WSClient) extends Controller {
 			myfile.ref.moveTo(new File(s"$filename"))
 			val asyncHttpClient:AsyncHttpClient = wsClient.underlying
 			val postBuilder = asyncHttpClient.preparePost(address + "/upload")
-			val builder = postBuilder.addBodyPart(new FilePart("$filename", new File(s"$filename")))
+			val builder = postBuilder.addBodyPart(new FilePart("code", new File(s"$filename")))
 			val response = asyncHttpClient.executeRequest(builder.build()).get();
 			new File(s"$filename").delete()
 			Ok(response.getResponseBody)
