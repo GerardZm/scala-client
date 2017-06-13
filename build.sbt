@@ -12,7 +12,8 @@ libraryDependencies ++= Seq(
 	filters,
 	"org.webjars" % "jquery" % "2.2.3",
 	"org.webjars" % "bootstrap" % "3.3.7",
-	//"com.ning" % "async-http-client" % "1.0.0",
+	"org.asynchttpclient" % "async-http-client" % "2.0.24",
+	//"org.springframework" % "spring-mock" % "2.0.8",
 	cache,
 	specs2 % Test
 )

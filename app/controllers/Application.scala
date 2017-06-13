@@ -20,6 +20,13 @@ import play.api.libs.Files.TemporaryFile
 import scala.concurrent.ExecutionContext
 import ExecutionContext.Implicits.global
 
+import org.asynchttpclient._
+import org.asynchttpclient.request.body.multipart.part._
+import org.asynchttpclient.request.body.multipart.FilePart
+
+import scala.concurrent._
+import scala.concurrent.duration._
+
 /**
  * Controller responsible for handling client's requests to server
  * 
@@ -40,20 +47,32 @@ class Application @Inject() (wsClient: WSClient) extends Controller {
      * HTTP GET request with empty body. On response code 201 redirect
      * to empty page containing response body.
      */
-     def get = Action.async {
-        wsClient.url(address).get().map { response =>
-	   Ok("Got response: " + response.body)
-        }
+     def get = Action {
+	val request = wsClient.url(address).get()
+	try {
+        	val response = Await.result(request, 4 seconds)
+		Ok(response.body)
+	}
+	catch {
+		case e: java.net.ConnectException => Ok("Nie nawiazano polaczenia z serwerem.\nTresc bledu: " + e);
+		case e: Exception => Ok("Wystapil blad: " + e);
+	}
      }
 
     /**
      * HTTP POST request with empty body. On response code 201 redirect
      * to empty page containing response body.
      */
-     def post = Action.async {
-         wsClient.url(address).post("").map { response =>
-	   Ok("Got response: " + response.body)
-	 }
+     def post = Action {
+	val request = wsClient.url(address).post("")
+	try {
+        	val response = Await.result(request, 4 seconds)
+		Ok(response.body)
+	}
+	catch {
+		case e: java.net.ConnectException => Ok("Nie nawiazano polaczenia z serwerem.\nTresc bledu: " + e);
+		case e: Exception => Ok("Wystapil blad: " + e);
+	}
      }
 
     /**
@@ -62,20 +81,25 @@ class Application @Inject() (wsClient: WSClient) extends Controller {
      * delete file uploaded by user).
      */
      def upload = Action(parse.multipartFormData) { request =>
-	  request.body.file("myfile").map { myfile =>
-	    import java.io.File
-	    val filename = myfile.filename
-	    val contentType = myfile.contentType
-	    myfile.ref.moveTo(new File(s"$filename"))
-	    wsClient.url(address + "/upload")
-			.post("$filename").map { response =>
-		   new File(s"$filename").delete()
-		   Ok("Got response: " + response.body)
-	    }
-	    Ok("File uploaded")
-	  }.getOrElse {
+	request.body.file("myfile").map { myfile =>
+		val filename = myfile.filename
+		val contentType = myfile.contentType
+		try {
+			myfile.ref.moveTo(new File(s"$filename"))
+			val asyncHttpClient:AsyncHttpClient = wsClient.underlying
+			val postBuilder = asyncHttpClient.preparePost(address + "/upload")
+			val builder = postBuilder.addBodyPart(new FilePart("$filename", new File(s"$filename")))
+			val response = asyncHttpClient.executeRequest(builder.build()).get();
+			new File(s"$filename").delete()
+			Ok(response.getResponseBody)
+		}
+		catch  {
+			case e: java.util.concurrent.ExecutionException => Ok("Nie nawiazano polaczenia z serwerem.\nTresc bledu: " + e);
+			case e: Exception => Ok("Wystapil blad: " + e);
+		}
+	}.getOrElse {
 		Ok("Blad");
-	  }
+	}
      }
 
 }

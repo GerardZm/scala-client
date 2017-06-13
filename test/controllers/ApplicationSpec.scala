@@ -51,9 +51,8 @@ class ApplicationSpec extends PlaySpecification {
    		val wsClient = AhcWSClient()
 		val controller = new Application(wsClient)
 		val file = new java.io.File(s"test/utilities/unitTest.txt")
-		val fileParts = Seq(new FilePart("attachment", "unitTest.txt", Some("txt"), file))
-		val multipartFormData = MultipartFormData(Seq(), fileParts, Seq(), Seq())
-		val upload = controller.upload(multipartFormData)
+		FileInputStream input = new FileInputStream(file);
+		val upload = controller.upload(new MockMultipartFile("file",file.getName(), "text/plain", IOUtils.toByteArray(input)))
 		status(upload) must equalTo(OK)
 	}*/
   }
