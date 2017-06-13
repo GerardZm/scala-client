@@ -81,6 +81,7 @@ class Application @Inject() (wsClient: WSClient) extends Controller {
      * 201 redirect to empty page containing response body (meanwhile
      * delete file uploaded by user).
      */
+
      def upload = Action(parse.multipartFormData) { request =>
 	request.body.file("myfile").map { myfile =>
 		val filename = myfile.filename
@@ -102,5 +103,4 @@ class Application @Inject() (wsClient: WSClient) extends Controller {
 		Ok("Blad");
 	}
      }
-
 }

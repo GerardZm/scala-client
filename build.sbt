@@ -18,6 +18,9 @@ libraryDependencies ++= Seq(
 	specs2 % Test
 )
 
+PlayKeys.devSettings := Seq("play.server.http.port" -> "9001")
+coverageExcludedPackages := "<empty>;Reverse.*;router\\.*"
+
 // Adds additional packages into Twirl
 //TwirlKeys.templateImports += "com.gzmuda.controllers._"
 
