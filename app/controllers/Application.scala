@@ -1,9 +1,11 @@
 /********************************************************/
 /*           Projekt systemy rozproszone                */
 /*                 Program Osoby 1                      */
-/*               Autor: Gerard Żmuda                    */
+/*               Autor: Gerard Żmuda                   */
 /*                  czerwiec 2017                       */
 /********************************************************/
+
+/* Batch Upload Feature by Dawid Zych */
 
 package controllers
 
@@ -42,7 +44,7 @@ class Application @Inject() (wsClient: WSClient) extends Controller {
     /**
      * Destination server address, change if needed
      */
-     var address = "http://192.168.127.129:3000/code"
+      var address = "http://localhost:9000/code"
 
     /**
      * HTTP GET request with empty body. On response code 201 redirect
@@ -103,4 +105,32 @@ class Application @Inject() (wsClient: WSClient) extends Controller {
 	}
      }
 
+	 	// by Dawid Zych
+	      def batchUpload = Action(parse.multipartFormData) { 
+			  request => {
+				  try {
+				  val files = request.body.files;
+				  val asyncHttpClient:AsyncHttpClient = wsClient.underlying
+				  val postBuilder = asyncHttpClient.preparePost(address + "/batchUpload")
+
+				  for(file <- files) {
+					val filename = file.filename;
+					file.ref.moveTo(new File(filename))
+					postBuilder.addBodyPart(new FilePart("code" + "_" + filename, new File(filename)))
+				  }
+
+				  val response = asyncHttpClient.executeRequest(postBuilder.build()).get()
+
+				  //Temp Files cleanup
+				   for(file <- files) {
+					new File(file.filename).delete()
+				  }
+				  
+				  Ok(response.getResponseBody)
+				  } catch {
+					case e: java.util.concurrent.ExecutionException => Ok("Nie nawiazano polaczenia z serwerem.\nTresc bledu: " + e);
+					case e: Exception => Ok("Wystapil blad: " + e);
+				  }
+			  }
+		  }			
 }
