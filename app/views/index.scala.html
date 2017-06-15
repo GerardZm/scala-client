@@ -1,0 +1,43 @@
+@* * This template is rendered from Webpage controller. * It calls for content of /main.scala.html/ file and * returns data
+as rendered webpage. * * Used sources: * https://github.com/playframework/play-scala-starter-example/blob/2.5.x/app/views/index.scala.html
+*@ @() @main("Panel uzytkownika") {
+<div class="container">
+	<div class="jumbotron">
+		<div class="row">
+			<div style="padding:20px" class="text-center">
+				<h2>Co chcesz zrobic?</h2>
+
+				<div class="col-md-12" style="margin-bottom: 15px">
+				    @helper.form(action = routes.Application.upload, 'enctype -> "multipart/form-data") {
+					<p>Wybierz plik:&nbsp;<label class="btn btn-primary btn-file" style="width: 100px;">
+					
+					<label class="btn btn-primary btn-lg btn-file ">
+						<span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
+						<input type="file" name="myfile" style="display: none;">
+					</label>
+					<input type="submit" value="Prześlij" class="btn btn-lg btn-primary"> 
+				    }
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<!-- part by Dawid Zych -->
+	<div class="jumbotron text-center">
+		<h2 class="text-center">Przesyłanie wielu plików na raz</h2>
+
+		<p>Wybierz pliki, możesz ich przesłać ile chcesz</p>
+			@helper.form(action = routes.Application.batchUpload, 'enctype -> "multipart/form-data") {
+				<div class="btn-group" role="group">
+			<label class="btn btn-primary btn-lg btn-file ">
+					<span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
+					<input multiple="multiple" type="file" accept=".scala" name="myfile" style="display: none;">
+					</label>
+			<input type="submit" value="Prześlij" class="btn btn-lg btn-primary"> 
+		</div> }
+
+
+	</div>
+</div>
+}
