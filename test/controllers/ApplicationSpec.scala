@@ -47,12 +47,19 @@ class ApplicationSpec extends PlaySpecification {
 		val post = controller.post.apply(FakeRequest())
 		status(post) must equalTo(OK)
 	}
+	
+	/*"send HTTP POST request imitating FILE and receive response" in new WithServer {
+   		val wsClient = AhcWSClient()
+		val controller = new Application(wsClient)
+		val response = Await.result(wsClient.url("127.0.0.1:9000").post(Map("code" -> Seq("test"))), 4 seconds)
+		response.status must equalTo(OK)
+	}*/
 
 	/*"send HTTP POST request containing a FILE and receive response" in new WithServer {
    		val wsClient = AhcWSClient()
 		val controller = new Application(wsClient)
 		//val file = new File(s"test/utilities/unitTest.txt")
-		
+		val response = wsClient.url("127.0.0.1:9000/").post(Source(FilePart("code", "unitTest.scala", Option("text/plain"), FileIO.fromFile(file)) :: DataPart("key", "value") :: List()))
 		val upload = controller.upload(multipartFile)
 		status(upload) must equalTo(OK)
 	}*/
