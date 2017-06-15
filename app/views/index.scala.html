@@ -18,7 +18,7 @@ as rendered webpage. * * Used sources: * https://github.com/playframework/play-s
 					<p>Wybierz plik:&nbsp;<label class="btn btn-primary btn-file" style="width: 100px;">
 					<span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span><input type="file" name="myfile" style="display: none;">
 		</label>
-						<input type="submit" class="btn btn-lg btn-primary"></p>
+						<input type="submit" value="Prześlij" class="btn btn-lg btn-primary"></p>
 					}
 				</div>
 
@@ -31,15 +31,13 @@ as rendered webpage. * * Used sources: * https://github.com/playframework/play-s
 		<h2 class="text-center">Przesyłanie wielu plików na raz</h2>
 
 		<p>Wybierz pliki, możesz ich przesłać ile chcesz</p>
-
-		
 			@helper.form(action = routes.Application.batchUpload, 'enctype -> "multipart/form-data") {
 				<div class="btn-group" role="group">
 			<label class="btn btn-primary btn-lg btn-file ">
 					<span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
 					<input multiple="multiple" type="file" accept=".scala" name="myfile" style="display: none;">
 					</label>
-			<input type="submit" class="btn btn-lg btn-primary"> 
+			<input type="submit" value="Prześlij" class="btn btn-lg btn-primary"> 
 		</div> }
 
 

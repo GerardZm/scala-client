@@ -4,7 +4,7 @@
 		module="scala-client-build-build"
 		revision="0.1-SNAPSHOT"
 		status="integration"
-		publication="20170615004026"
+		publication="20170615144803"
 		e:sbtVersion="0.13" e:scalaVersion="2.10"
 	>
 		<description>

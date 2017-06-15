@@ -1,4 +1,4 @@
-[0m[[0minfo[0m] [0mUpdating {file:/C:/Users/Dawid/Projekt_Rozproszone/scala-client/project/project/}scala-client-build-build...[0m
+[0m[[0minfo[0m] [0mUpdating {file:/C:/RozproszoneTest/scala-client/project/project/}scala-client-build-build...[0m
 [0m[[0mdebug[0m] [0m:: resolving dependencies :: default#scala-client-build-build;0.1-SNAPSHOT[0m
 [0m[[0mdebug[0m] [0m	confs: [compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool][0m
 [0m[[0mdebug[0m] [0m	validate = true[0m
@@ -6009,19 +6009,19 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#template-resolver;0.1!template-resolver.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#jline;2.10.6!jline.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar[0m
-[0m[[0mdebug[0m] [0m:: resolution report :: resolve 2747ms :: artifacts dl 49ms[0m
-[0m[[0mdebug[0m] [0m	report for default#scala-client-build-build;0.1-SNAPSHOT compile produced in C:\Users\Dawid\Projekt_Rozproszone\scala-client\project\project\target\resolution-cache\reports\default-scala-client-build-build-compile.xml[0m
-[0m[[0mdebug[0m] [0m	report for default#scala-client-build-build;0.1-SNAPSHOT runtime produced in C:\Users\Dawid\Projekt_Rozproszone\scala-client\project\project\target\resolution-cache\reports\default-scala-client-build-build-runtime.xml[0m
-[0m[[0mdebug[0m] [0m	report for default#scala-client-build-build;0.1-SNAPSHOT test produced in C:\Users\Dawid\Projekt_Rozproszone\scala-client\project\project\target\resolution-cache\reports\default-scala-client-build-build-test.xml[0m
-[0m[[0mdebug[0m] [0m	report for default#scala-client-build-build;0.1-SNAPSHOT provided produced in C:\Users\Dawid\Projekt_Rozproszone\scala-client\project\project\target\resolution-cache\reports\default-scala-client-build-build-provided.xml[0m
-[0m[[0mdebug[0m] [0m	report for default#scala-client-build-build;0.1-SNAPSHOT optional produced in C:\Users\Dawid\Projekt_Rozproszone\scala-client\project\project\target\resolution-cache\reports\default-scala-client-build-build-optional.xml[0m
-[0m[[0mdebug[0m] [0m	report for default#scala-client-build-build;0.1-SNAPSHOT compile-internal produced in C:\Users\Dawid\Projekt_Rozproszone\scala-client\project\project\target\resolution-cache\reports\default-scala-client-build-build-compile-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for default#scala-client-build-build;0.1-SNAPSHOT runtime-internal produced in C:\Users\Dawid\Projekt_Rozproszone\scala-client\project\project\target\resolution-cache\reports\default-scala-client-build-build-runtime-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for default#scala-client-build-build;0.1-SNAPSHOT test-internal produced in C:\Users\Dawid\Projekt_Rozproszone\scala-client\project\project\target\resolution-cache\reports\default-scala-client-build-build-test-internal.xml[0m
-[0m[[0mdebug[0m] [0m	report for default#scala-client-build-build;0.1-SNAPSHOT plugin produced in C:\Users\Dawid\Projekt_Rozproszone\scala-client\project\project\target\resolution-cache\reports\default-scala-client-build-build-plugin.xml[0m
-[0m[[0mdebug[0m] [0m	report for default#scala-client-build-build;0.1-SNAPSHOT sources produced in C:\Users\Dawid\Projekt_Rozproszone\scala-client\project\project\target\resolution-cache\reports\default-scala-client-build-build-sources.xml[0m
-[0m[[0mdebug[0m] [0m	report for default#scala-client-build-build;0.1-SNAPSHOT docs produced in C:\Users\Dawid\Projekt_Rozproszone\scala-client\project\project\target\resolution-cache\reports\default-scala-client-build-build-docs.xml[0m
-[0m[[0mdebug[0m] [0m	report for default#scala-client-build-build;0.1-SNAPSHOT pom produced in C:\Users\Dawid\Projekt_Rozproszone\scala-client\project\project\target\resolution-cache\reports\default-scala-client-build-build-pom.xml[0m
-[0m[[0mdebug[0m] [0m	report for default#scala-client-build-build;0.1-SNAPSHOT scala-tool produced in C:\Users\Dawid\Projekt_Rozproszone\scala-client\project\project\target\resolution-cache\reports\default-scala-client-build-build-scala-tool.xml[0m
-[0m[[0mdebug[0m] [0m	resolve done (2747ms resolve - 49ms download)[0m
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 1716ms :: artifacts dl 37ms[0m
+[0m[[0mdebug[0m] [0m	report for default#scala-client-build-build;0.1-SNAPSHOT compile produced in C:\RozproszoneTest\scala-client\project\project\target\resolution-cache\reports\default-scala-client-build-build-compile.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#scala-client-build-build;0.1-SNAPSHOT runtime produced in C:\RozproszoneTest\scala-client\project\project\target\resolution-cache\reports\default-scala-client-build-build-runtime.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#scala-client-build-build;0.1-SNAPSHOT test produced in C:\RozproszoneTest\scala-client\project\project\target\resolution-cache\reports\default-scala-client-build-build-test.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#scala-client-build-build;0.1-SNAPSHOT provided produced in C:\RozproszoneTest\scala-client\project\project\target\resolution-cache\reports\default-scala-client-build-build-provided.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#scala-client-build-build;0.1-SNAPSHOT optional produced in C:\RozproszoneTest\scala-client\project\project\target\resolution-cache\reports\default-scala-client-build-build-optional.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#scala-client-build-build;0.1-SNAPSHOT compile-internal produced in C:\RozproszoneTest\scala-client\project\project\target\resolution-cache\reports\default-scala-client-build-build-compile-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#scala-client-build-build;0.1-SNAPSHOT runtime-internal produced in C:\RozproszoneTest\scala-client\project\project\target\resolution-cache\reports\default-scala-client-build-build-runtime-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#scala-client-build-build;0.1-SNAPSHOT test-internal produced in C:\RozproszoneTest\scala-client\project\project\target\resolution-cache\reports\default-scala-client-build-build-test-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#scala-client-build-build;0.1-SNAPSHOT plugin produced in C:\RozproszoneTest\scala-client\project\project\target\resolution-cache\reports\default-scala-client-build-build-plugin.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#scala-client-build-build;0.1-SNAPSHOT sources produced in C:\RozproszoneTest\scala-client\project\project\target\resolution-cache\reports\default-scala-client-build-build-sources.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#scala-client-build-build;0.1-SNAPSHOT docs produced in C:\RozproszoneTest\scala-client\project\project\target\resolution-cache\reports\default-scala-client-build-build-docs.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#scala-client-build-build;0.1-SNAPSHOT pom produced in C:\RozproszoneTest\scala-client\project\project\target\resolution-cache\reports\default-scala-client-build-build-pom.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#scala-client-build-build;0.1-SNAPSHOT scala-tool produced in C:\RozproszoneTest\scala-client\project\project\target\resolution-cache\reports\default-scala-client-build-build-scala-tool.xml[0m
+[0m[[0mdebug[0m] [0m	resolve done (1716ms resolve - 37ms download)[0m
 [0m[[0minfo[0m] [0mDone updating.[0m

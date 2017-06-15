@@ -4,7 +4,7 @@
 		module="scala-client_2.11"
 		revision="1.0-SNAPSHOT"
 		status="integration"
-		publication="20170615004042"
+		publication="20170615153651"
 	>
 		<description>
 		scala-client

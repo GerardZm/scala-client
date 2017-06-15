@@ -42,7 +42,7 @@ Seq[Any](format.raw/*3.7*/(""" """),_display_(/*3.9*/main("Panel uzytkownika")/*
 					"""),format.raw/*18.6*/("""<p>Wybierz plik:&nbsp;<label class="btn btn-primary btn-file" style="width: 100px;">
 					<span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span><input type="file" name="myfile" style="display: none;">
 		</label>
-						<input type="submit" class="btn btn-lg btn-primary"></p>
+						<input type="submit" value="Prześlij" class="btn btn-lg btn-primary"></p>
 					""")))}),format.raw/*22.7*/("""
 				"""),format.raw/*23.5*/("""</div>
 
@@ -55,19 +55,17 @@ Seq[Any](format.raw/*3.7*/(""" """),_display_(/*3.9*/main("Panel uzytkownika")/*
 		<h2 class="text-center">Przesyłanie wielu plików na raz</h2>
 
 		<p>Wybierz pliki, możesz ich przesłać ile chcesz</p>
-
-		
-			"""),_display_(/*36.5*/helper/*36.11*/.form(action = routes.Application.batchUpload, 'enctype -> "multipart/form-data")/*36.92*/ {_display_(Seq[Any](format.raw/*36.94*/("""
-				"""),format.raw/*37.5*/("""<div class="btn-group" role="group">
+			"""),_display_(/*34.5*/helper/*34.11*/.form(action = routes.Application.batchUpload, 'enctype -> "multipart/form-data")/*34.92*/ {_display_(Seq[Any](format.raw/*34.94*/("""
+				"""),format.raw/*35.5*/("""<div class="btn-group" role="group">
 			<label class="btn btn-primary btn-lg btn-file ">
 					<span class="glyphicon glyphicon-folder-open" aria-hidden="true"></span>
 					<input multiple="multiple" type="file" accept=".scala" name="myfile" style="display: none;">
 					</label>
-			<input type="submit" class="btn btn-lg btn-primary"> 
-		</div> """)))}),format.raw/*43.11*/("""
+			<input type="submit" value="Prześlij" class="btn btn-lg btn-primary"> 
+		</div> """)))}),format.raw/*41.11*/("""
 
 
-	"""),format.raw/*46.2*/("""</div>
+	"""),format.raw/*44.2*/("""</div>
 </div>
 """)))}))
       }
@@ -91,11 +89,11 @@ as rendered webpage. * * Used sources: * https://github.com/playframework/play-s
 object index extends index_Scope0.index
               /*
                   -- GENERATED --
-                  DATE: Thu Jun 15 11:36:47 CEST 2017
-                  SOURCE: C:/Users/Dawid/Projekt_Rozproszone/scala-client/app/views/index.scala.html
-                  HASH: 8aa382152124ba05c1b21a73b55cf265262b877d
-                  MATRIX: 783->269|879->271|906->273|939->298|978->300|1006->302|1260->529|1275->535|1312->551|1496->708|1511->714|1549->731|1726->882|1741->888|1826->964|1866->966|1900->973|2233->1276|2266->1282|2534->1524|2549->1530|2639->1611|2679->1613|2712->1619|3095->1971|3129->1978
-                  LINES: 22->3|27->3|27->3|27->3|27->3|28->4|34->10|34->10|34->10|37->13|37->13|37->13|41->17|41->17|41->17|41->17|42->18|46->22|47->23|60->36|60->36|60->36|60->36|61->37|67->43|70->46
+                  DATE: Thu Jun 15 15:38:14 CEST 2017
+                  SOURCE: C:/RozproszoneTest/scala-client/app/views/index.scala.html
+                  HASH: dac0a48d4164affd2881c1b2f228c36d70fcb6d6
+                  MATRIX: 783->269|879->271|906->273|939->298|978->300|1006->302|1260->529|1275->535|1312->551|1496->708|1511->714|1549->731|1726->882|1741->888|1826->964|1866->966|1900->973|2250->1293|2283->1299|2545->1535|2560->1541|2650->1622|2690->1624|2723->1630|3123->1999|3157->2006
+                  LINES: 22->3|27->3|27->3|27->3|27->3|28->4|34->10|34->10|34->10|37->13|37->13|37->13|41->17|41->17|41->17|41->17|42->18|46->22|47->23|58->34|58->34|58->34|58->34|59->35|65->41|68->44
                   -- GENERATED --
               */
           

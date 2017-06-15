@@ -1,5 +1,6 @@
 [0m[[0mdebug[0m] [0mCopy resource mappings: [0m
-[0m[[0mdebug[0m] [0m	(C:\Users\Dawid\Projekt_Rozproszone\scala-client\conf\application.conf,C:\Users\Dawid\Projekt_Rozproszone\scala-client\target\scala-2.11\classes\application.conf)[0m
-[0m[[0mdebug[0m] [0m	(C:\Users\Dawid\Projekt_Rozproszone\scala-client\conf\logback.xml,C:\Users\Dawid\Projekt_Rozproszone\scala-client\target\scala-2.11\classes\logback.xml)[0m
-[0m[[0mdebug[0m] [0m	(C:\Users\Dawid\Projekt_Rozproszone\scala-client\conf\messages,C:\Users\Dawid\Projekt_Rozproszone\scala-client\target\scala-2.11\classes\messages)[0m
-[0m[[0mdebug[0m] [0m	(C:\Users\Dawid\Projekt_Rozproszone\scala-client\conf\routes,C:\Users\Dawid\Projekt_Rozproszone\scala-client\target\scala-2.11\classes\routes)[0m
+[0m[[0mdebug[0m] [0m	(C:\RozproszoneTest\scala-client\conf\application.conf,C:\RozproszoneTest\scala-client\target\scala-2.11\classes\application.conf)[0m
+[0m[[0mdebug[0m] [0m	(C:\RozproszoneTest\scala-client\conf\desktop.ini,C:\RozproszoneTest\scala-client\target\scala-2.11\classes\desktop.ini)[0m
+[0m[[0mdebug[0m] [0m	(C:\RozproszoneTest\scala-client\conf\logback.xml,C:\RozproszoneTest\scala-client\target\scala-2.11\classes\logback.xml)[0m
+[0m[[0mdebug[0m] [0m	(C:\RozproszoneTest\scala-client\conf\messages,C:\RozproszoneTest\scala-client\target\scala-2.11\classes\messages)[0m
+[0m[[0mdebug[0m] [0m	(C:\RozproszoneTest\scala-client\conf\routes,C:\RozproszoneTest\scala-client\target\scala-2.11\classes\routes)[0m

@@ -89,8 +89,8 @@ Seq[Any](format.raw/*10.32*/("""
 object main extends main_Scope0.main
               /*
                   -- GENERATED --
-                  DATE: Thu Jun 15 00:42:28 CEST 2017
-                  SOURCE: C:/Users/Dawid/Projekt_Rozproszone/scala-client/app/views/main.scala.html
+                  DATE: Thu Jun 15 15:36:52 CEST 2017
+                  SOURCE: C:/RozproszoneTest/scala-client/app/views/main.scala.html
                   HASH: c02b0d5e909af1bc9bc92abe3d5be5f0f87b78ae
                   MATRIX: 834->312|960->342|991->346|1063->391|1089->396|1175->455|1190->461|1268->517|1317->539|1332->545|1407->599|1525->690|1540->696|1601->735|2447->1555|2475->1562|2508->1568
                   LINES: 27->10|32->10|34->12|37->15|37->15|38->16|38->16|38->16|39->17|39->17|39->17|40->18|40->18|40->18|61->39|61->39|62->40

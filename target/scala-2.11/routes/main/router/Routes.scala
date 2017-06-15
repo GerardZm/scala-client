@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
-// @SOURCE:C:/Users/Dawid/Projekt_Rozproszone/scala-client/conf/routes
-// @DATE:Thu Jun 15 11:31:07 CEST 2017
+// @SOURCE:C:/RozproszoneTest/scala-client/conf/routes
+// @DATE:Thu Jun 15 15:36:51 CEST 2017
 
 package router
 
