@@ -78,7 +78,7 @@ class Application @Inject() (wsClient: WSClient) extends Controller {
 				  try {
               val files = request.body.files;
               val asyncHttpClient:AsyncHttpClient = wsClient.underlying
-              val postBuilder = asyncHttpClient.preparePost(address + "/batchUpload")
+              val postBuilder = asyncHttpClient.preparePost("http://localhost:9000/code/batchUpload")
 
               for(file <- files) {
                 val filename = file.filename;
